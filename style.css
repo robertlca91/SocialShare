@@ -1,0 +1,148 @@
+:root {
+  --white-color: #ffffff;
+  --dark-color: #2f3542;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: san-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--dark-color);
+  background-image: url(/store/storeone.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+}
+
+.site {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.share {
+  position: relative;
+  width: 290px;
+  height: 70px;
+  padding: 0 20px;
+  line-height: 70px;
+  border-radius: 35px;
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  box-shadow: rgb(0 0 0 / 25%) 0 25px 50px -12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.share span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 35px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  z-index: 1;
+  transition: transform 0.7s 0.1s;
+}
+.share:hover span {
+  transform: translateX(-100%);
+}
+
+.share nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.share nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: 2px solid transparent;
+  transition: outline-offset 0.25s, outline-color 0.25s;
+}
+.share nav a:hover {
+  outline-offset: 4px;
+  color: var(--white-color);
+}
+
+.share nav a:nth-child(1):hover {
+  background-color: #4267b2;
+  outline-color: #4267b2;
+}
+.share nav a:nth-child(2):hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+.share nav a:nth-child(3):hover {
+  background-color: #e60023;
+  outline-color: #e60023;
+}
+.share nav a:nth-child(4):hover {
+  background-color: #333333;
+  outline-color: #333333;
+}
+.share nav a:nth-child(5):hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+
+.share:hover nav a {
+  animation: bounce 0.7s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.share:hover nav a:nth-child(5) {
+  animation-delay: 0.1s;
+}
+.share:hover nav a:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.share:hover nav a:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.share:hover nav a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.share:hover nav a:nth-child(1) {
+  animation-delay: 0.5s;
+}
